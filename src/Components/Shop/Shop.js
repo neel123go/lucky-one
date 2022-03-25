@@ -1,5 +1,3 @@
-import { Button } from 'bootstrap';
-import { Modal } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
@@ -34,7 +32,7 @@ const Shop = () => {
 
     return (
         <div className='shop-container'>
-            <div className='product-container p-5'>
+            <div className='product-container'>
                 {
                     products.map(product => <Product product={product} key={product.id} handleAddToCart={handleAddToCart}></Product>)
                 }

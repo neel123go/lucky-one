@@ -1,11 +1,12 @@
 .shop-container{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 .product-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    padding: 50px;
 }
 .cart-container{
     background-color: rgba(255, 125, 19, 0.712);
@@ -28,4 +29,28 @@
     padding: 10px;
     color: black;
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 360px){
+    .shop-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cart-container{
+        border-radius: 0;
+    }
+    .product-container{
+       display: block;
+       padding: 20px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .shop-container{
+        display: block;
+    }
+    .cart-container{
+        border-radius: 0;
+    }
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
