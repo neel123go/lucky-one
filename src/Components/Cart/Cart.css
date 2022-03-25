@@ -1,0 +1,13 @@
+.cart-product-container{
+    display: flex;
+    align-items: center;
+}
+.cart-img{
+    width: 15%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.cart-text{
+    margin-top: 10px;
+    font-size: 18px;
+}

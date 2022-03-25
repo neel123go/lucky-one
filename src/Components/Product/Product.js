@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Product.css';
 
-const Product = ({ product }) => {
-    const { id, name, price, img } = product;
+const Product = ({ product, handleAddToCart }) => {
+    const { name, price, img } = product;
     return (
         <div className='card'>
             <img className='card-img' src={img} alt="" />
@@ -12,7 +12,7 @@ const Product = ({ product }) => {
                 <h5>{name}</h5>
                 <h4 className='mt-3'>Price: $<span className='price'>{price}</span></h4>
             </div>
-            <button className='card-btn'>Add To Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+            <button onClick={() => handleAddToCart(product)} className='card-btn'>Add To Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
         </div>
     );
 };
