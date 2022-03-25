@@ -1,4 +1,14 @@
+.question-answer-container{
+    padding: 20px 50px;
+}
 .answer-text{
     font-size: 20px;
     line-height: 1.5;
+}
+
+/* Responsive for mobile device */
+@media only screen and (max-width: 360px){
+    .question-answer-container{
+        padding: 20px 20px;
+    }
 }

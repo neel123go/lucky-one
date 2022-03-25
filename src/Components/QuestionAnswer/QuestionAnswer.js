@@ -3,7 +3,7 @@ import './QuestionAnswer.css';
 
 const QuestionAnswer = () => {
     return (
-        <div className='p-5'>
+        <div className='question-answer-container'>
             <h2>What is the difference between props and state?</h2>
             <h6 className='mt-4 answer-text mb-5'>There are some differences between props and state. Props are read-only. On the other hand, State changes can be asynchronous. Props are immutable. But the state is mutable. Props allow us to pass data from one component to other components as an argument. On the other hand, State holds information about the components. Props make components reusable. But State cannot make components reusable.</h6>
 

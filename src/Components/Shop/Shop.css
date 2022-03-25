@@ -31,6 +31,7 @@
     margin-top: 10px;
 }
 
+/* Responsive for mobile device */
 @media only screen and (max-width: 360px){
     .shop-container{
         grid-template-columns: 1fr 1fr;
@@ -43,6 +44,8 @@
        padding: 20px;
     }
 }
+
+/* Responsive for tablet device */
 @media only screen and (max-width: 768px){
     .shop-container{
         display: block;
