@@ -1,9 +1,12 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Shop from './Components/Shop';
 
 function App() {
   return (
     <div className="App">
-      <h2>This is a website</h2>
+      <h1 className='my-5 text-center'>Clock Wala</h1>
+      <Shop></Shop>
     </div>
   );
 }
