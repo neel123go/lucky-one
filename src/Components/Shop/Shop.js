@@ -47,7 +47,7 @@ const Shop = () => {
 
                 <button onClick={() => handleChooseOneBtn(Math.floor((Math.random() * cart.length)))} className='choose-btn'>Choose 1 For Me</button>
                 <Cart product={choose}></Cart>
-                <button className='choose-again-btn'>Choose Again</button>
+                <button onClick={() => { setCart([]); setChoose([]); }} className='choose-again-btn'>Choose Again</button>
             </div>
         </div >
     );
