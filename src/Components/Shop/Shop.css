@@ -10,5 +10,22 @@
 .cart-container{
     background-color: rgba(255, 125, 19, 0.712);
     border-radius: 10px 0 0 10px;
-    height: 500px;
+    height: fit-content;
+}
+.choose-btn{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    margin-top: 30px;
+    display: block;
+}
+.choose-again-btn{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    margin-top: 10px;
 }

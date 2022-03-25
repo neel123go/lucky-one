@@ -1,3 +1,5 @@
+import { Button } from 'bootstrap';
+import { Modal } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
@@ -6,6 +8,7 @@ import './Shop.css';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [choose, setChoose] = useState([]);
 
     useEffect(() => {
         fetch('products.json')
@@ -22,6 +25,13 @@ const Shop = () => {
         }
     }
 
+    const handleChooseOneBtn = (randomNumber) => {
+        if (cart.length > 0) {
+            const selectedProduct = cart[randomNumber];
+            setChoose(selectedProduct);
+        }
+    }
+
     return (
         <div className='shop-container'>
             <div className='product-container p-5'>
@@ -34,9 +44,12 @@ const Shop = () => {
                 {
                     cart.map(product => <Cart key={product.id} product={product} ></Cart>)
                 }
-                {/* <Cart cart={cart}></Cart> */}
+
+                <button onClick={() => handleChooseOneBtn(Math.floor((Math.random() * cart.length)))} className='choose-btn'>Choose 1 For Me</button>
+                <Cart product={choose}></Cart>
+                <button className='choose-again-btn'>Choose Again</button>
             </div>
-        </div>
+        </div >
     );
 };
 
